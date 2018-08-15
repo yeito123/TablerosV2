@@ -1,0 +1,76 @@
+﻿body {
+}
+     
+.toolTipA{
+    
+    background: rgba(181, 185, 199, 0.86);
+    border: 2px solid #285513;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #333;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 5px 5px 5px 5px;
+    max-width: 250px;
+    position: absolute;
+    z-index: 1500;   
+       background: #333;
+/*/* for IE */
+  filter:alpha(opacity=93);*/
+  /* CSS3 standard */
+  opacity:0.93;
+   box-shadow: 5px 5px 5px #333;
+  
+
+}
+     .watermarked
+        {
+         
+            position: absolute;
+            z-index: 10005;
+            background-color: Gray;
+            filter: alpha(opacity=75);
+        }
+        .clExt
+        {
+            position: relative;
+        }
+        .style1{ 
+        color:White;
+        }
+          .gvContainer
+        {
+             overflow: auto;             
+            height: 200px;
+             overflow-x: visible;
+            scrollbar-face-color: #FFFFFF;
+            scrollbar-shadow-color: #003366;
+            scrollbar-highlight-color: #003366;
+            scrollbar-3dlight-color: #F6F4FD;
+            scrollbar-darkshadow-color: #F6F4FD;
+            scrollbar-track-color: #FDFDFE;
+            scrollbar-arrow-color: #003366;
+        }
+          .gvContainer2
+        {
+             overflow: auto;             
+             height:60px;
+             
+            scrollbar-face-color: #FFFFFF;
+            scrollbar-shadow-color: #003366;
+            scrollbar-highlight-color: #003366;
+            scrollbar-3dlight-color: #F6F4FD;
+            scrollbar-darkshadow-color: #F6F4FD;
+            scrollbar-track-color: #FDFDFE;
+            scrollbar-arrow-color: #003366;
+        }
+         .EncabezadoFijo
+        {
+            position:absolute;
+            top:45px;
+            
+         
+            
+        }
+#intdivInterfaz { background-color:snow;
+}
+     

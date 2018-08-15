@@ -1,0 +1,117 @@
+/* Generic context menu styles */
+.contextMenu {
+	position: absolute;
+	width: 230px;
+	z-index: 99999 ;
+	border: solid 1px teal;
+	background: #12173d;
+	padding: 0px;
+	margin: 0px;
+	display: none;
+	font-family:Calibri;
+	font-size:18px;
+    filter:alpha(opacity=86);
+  /* CSS3 standard */
+  opacity:0.86;
+   box-shadow: 5px 5px 5px #333;
+  
+}
+.contextMenu3 {
+	position: absolute;
+	width: 290px;
+	z-index: 99999;
+	border: solid 1px teal;
+	background: #000000;
+	padding: 0px;
+	margin: 0px;
+	display: none;
+	font-family:Calibri;
+	font-size:18px;
+    filter:alpha(opacity=86);
+  /* CSS3 standard */
+  opacity:0.86;
+   box-shadow: 5px 5px 5px #333;
+}
+
+.contextMenu LI {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+        
+}
+
+.contextMenu A {
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+	line-height: 20px;
+	height: 20px;
+	background-position: 6px center;
+	background-repeat: no-repeat;
+	outline: none;
+	padding: 1px 5px;
+	padding-left: 28px;
+}
+
+.contextMenu LI.hover A {
+	color: #12173d;
+	background-color: #fFF;
+
+    
+}
+
+.contextMenu LI.disabled A {
+	color: #AAa;
+	cursor: default;
+}
+
+.contextMenu LI.hover.disabled A {
+	background-color: transparent;
+     
+}
+
+.contextMenu LI.separator {
+	border-top: solid 1px #CCC;
+}
+
+/*
+	Adding Icons
+	
+	You can add icons to the context menu by adding
+	classes to the respective LI element(s)
+*/
+ 
+.contextMenu LI.edit A { background-image: url(images/page_white_edit.png); }
+.contextMenu LI.cut A { background-image: url(images/cut.png); }
+.contextMenu LI.copy A { background-image: url(images/page_white_copy.png); }
+.contextMenu LI.paste A { background-image: url(images/page_white_paste.png); }
+.contextMenu LI.delete A { background-image: url(images/page_white_delete.png); }
+.contextMenu LI.quit A { background-image: url(images/door.png); }
+.cssTable001 {
+
+    	color: #12173d;
+	text-decoration: none;
+	display: block;
+	line-height: 20px;
+	height: 20px;
+	background-position: 6px center;
+	background-repeat: no-repeat;
+	outline: none;
+	padding: 1px 5px;
+	padding-left: 28px;
+}
+.cc100 {
+
+    width:100%;
+    height:100%;
+    z-index:10000;
+    background-color:silver;
+}
+
+.cc0 {
+
+    width:0%;
+    height:0%;
+    z-index:0;
+    background-color:silver;
+}

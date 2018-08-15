@@ -1,0 +1,257 @@
+﻿@font-face {
+    font-family: Neuropol;
+    src: url("NEUROPOL.ttf");
+}
+
+body {
+    background-repeat: no-repeat;  background-size:100% 100%; 
+    background-color: black;
+    background-image: url(/img/bienvenida.png);
+    color: white;
+    font-family: Calibri;
+    font-size:11pt;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.cssmodal{
+    background-color: #BDBDBD;
+}
+
+#bodyprecios{
+    background-color: black;    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+}
+ 
+iframe {
+    border:none;
+}
+
+.cssContent000 {
+    background-color: rgba(0,0,0,0.8);
+}
+.cssTransparency{
+ opacity: 0.85;
+  filter:  alpha(opacity=85); 
+}
+
+
+.cssTable000 td {
+    background-color: rgba(0,0,0,0.4);
+    padding-left:5.5pt;
+    padding-right:5.5pt;
+    
+}
+
+.cssTable000 th {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    
+}
+
+
+.cssTable000th {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    
+}
+
+.csslabel{
+    text-align:center;    
+    color:#C3C3C3;
+    position: relative;
+    font-size:200%    
+}
+
+
+ .cssTable000 td {
+    border-left: 0px solid white;
+    border-right: 0px solid white;
+    
+}
+ 
+
+.cssHeader000 {
+    text-align: center;
+    font-family: Neuropol;
+    font-size: 30pt;
+    width:100%;    
+}
+
+.cssHeader001 {
+    font-family: Neuropol;
+    font-size: 18pt;
+    width:100%;
+    margin-bottom:1pt;
+}
+
+.cssTable000 {
+    
+    width:97%;
+    margin-left:1%;
+    margin-top:10pt;
+    
+}
+
+.cssTable001 {
+    margin:0 auto;
+    text-align:center;
+    bottom:11pt;
+    margin-top:0cm; 
+    background-color:rgba(0,0,0,0.4);
+     
+}
+
+    .cssTable001 th {
+        font-family: Neuropol;
+        font-size: 18pt; 
+        vertical-align:middle;
+        border:0px solid white;   
+    } 
+    
+    .cssTable001 td 
+    {
+        margin:0 auto;
+        border:0px solid white;
+        vertical-align:middle;
+       
+        }
+        
+        .cssTable005 {
+    margin:0 auto;
+    text-align:center;
+    bottom:11pt;
+   
+    vertical-align:middle;
+    
+}
+
+.csstableGrid000
+{
+    margin:0 auto;
+       border:3px solid white;
+        vertical-align:middle;
+}
+    
+
+#nreloj {
+    color:white;
+    font-family: Neuropol;
+    font-size: 18pt;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    text-align: center;
+}
+
+#Label2, #RangeValidator1 {
+    font-weight:bold;
+    color:red;
+}
+
+
+
+html {
+    overflow: hidden;
+}
+
+.cssDefault {
+    width: 97%;
+    font-size: 16px;
+}
+
+.cssLink {
+    color: #A8BBCE;
+}
+
+.cssImg {
+    width: 21px;
+    display: block;
+}
+
+.cssImgHdd {
+    width: 21px;
+    display: none;
+}
+
+.GrdOver {
+    height: 0px;
+    scrollbar-face-color: #000000;
+    scrollbar-shadow-color: #0033ff;
+    scrollbar-highlight-color: #003366;
+    scrollbar-3dlight-color: #F6F4FD;
+    scrollbar-darkshadow-color: #F6F4FD;
+    scrollbar-track-color: #003366;
+    scrollbar-arrow-color: #0033ff;
+}
+
+.GrdOver2 {
+    height: 650px;
+    scrollbar-face-color: #000000;
+    scrollbar-shadow-color: #0033ff;
+    scrollbar-highlight-color: #003366;
+    scrollbar-3dlight-color: #F6F4FD;
+    scrollbar-darkshadow-color: #F6F4FD;
+    scrollbar-track-color: #003366;
+    scrollbar-arrow-color: #0033ff;
+    color: White;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.GrdOver2b {
+    height: 0px;
+    scrollbar-face-color: #000000;
+    scrollbar-shadow-color: #0033ff;
+    scrollbar-highlight-color: #003366;
+    scrollbar-3dlight-color: #F6F4FD;
+    scrollbar-darkshadow-color: #F6F4FD;
+    scrollbar-track-color: #003366;
+    scrollbar-arrow-color: #0033ff;
+    color: White;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.GrdOver3 {
+    border: 1px solid #dd9BC7;
+    color: White;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.GrdOver4 {
+    border: 0px solid #009BC7;
+    color: White;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.GrdOver5 {
+    overflow: auto;
+    height: 75px;
+    width: 902px;
+    scrollbar-face-color: #000000;
+    scrollbar-shadow-color: #0033ff;
+    scrollbar-highlight-color: #003366;
+    scrollbar-3dlight-color: #F6F4FD;
+    scrollbar-darkshadow-color: #F6F4FD;
+    scrollbar-track-color: #003366;
+    scrollbar-arrow-color: #0033ff;
+    color: White;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.frmclass
+{
+     width:80%;
+    
+    }

@@ -1,0 +1,275 @@
+﻿.divHeader {
+	background-color: #242424;
+	top: 0%;
+	left: 0%;
+	position: absolute;
+	width: 100%;
+	height: 20%;
+}
+
+.divcuerpo {
+	background-color: black;
+	top: 20%;
+	left: 0%;
+	position: absolute;
+	width: 100%;
+	height: 75%;
+}
+
+.divPie {
+	background-color: #242424;
+	top: 95%;
+	left: 0%;
+	position: absolute;
+	width: 100%;
+	height: 5%;
+	text-align: center;
+}
+
+.divLogoMazda {
+	/*background-color: #808B96;*/
+	top: 0%;
+	left: 0%;
+	position: absolute;
+	width: 20%;
+	height: 100%;
+}
+
+.divFechaHora {
+	/*background-color: #808B96;*/
+	top: 0%;
+	left: 20%;
+	position: absolute;
+	width: 60%;
+	height: 100%;
+}
+
+.divLogoEmpresa {
+	/*background-color: #808B96;*/
+	top: 0%;
+	left: 80%;
+	position: absolute;
+	width: 20%;
+	height: 100%;
+}
+
+.imgLogoMazda {
+	height: 95%;
+	top: 0%;
+	left: 15%;
+	position: absolute;
+}
+
+.imgLogoAgencia {
+	height: 50%;
+	width: 50%;
+	top: 25%;
+	left: 25%;
+	position: absolute;
+}
+
+.divreloj {
+	background: linear-gradient(to bottom, #5E5E5E,#3e3e3e,#242424);
+	top: 35%;
+	width: 100%;
+	left: 0%;
+	position: absolute;
+	border-color: black;
+	border: solid;
+	height: 65%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.divhora {
+	border-right: solid;
+	width: 50%;
+	-webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(#C3C3C3), to(rgba(0, 0, 0, 0))) 1 100%;
+	-webkit-border-image: -webkit-linear-gradient(bottom, #C3C3C3, rgba(0, 0, 0, 0)) 1 100%;
+	-moz-border-image: -moz-linear-gradient(bottom, #C3C3C3, rgba(0, 0, 0, 0)) 1 100%;
+	-o-border-image: -o-linear-gradient(bottom, #C3C3C3, rgba(0, 0, 0, 0)) 1 100%;
+	border-image: linear-gradient(to top, #C3C3C3, rgba(0, 0, 0, 0)) 1 100%;
+	height: 100%;
+	border-right-width: 2px;
+	left: 0%;
+}
+
+
+.reloj {
+	border-style: none;
+	border-color: inherit;
+	border-width: 0;
+	z-index: 8999;
+	background-color: transparent;
+	color: #C3C3C3;
+	font-size: 4em;
+	font-weight: bold;
+	top: 3%;
+	position: absolute;
+	left: 15%;
+}
+
+.mes {
+	width: 50%;
+	height: 100%;
+	left: 50%;
+	top: 0%;
+	position: absolute;
+}
+
+.nmes {
+	z-index: 8999;
+	background-color: transparent;
+	color: #C3C3C3;
+	border: 0;
+	font-size: 1.5em;
+	top: 33%;
+	position: absolute;
+	left: 5%;
+	width: 100%;
+}
+
+.divTitulo {
+	width: 100%;
+	height: 5%;
+	text-align: center;
+	padding-top: .5em;
+}
+
+.label1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: white;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.divinfocitas {
+	text-align: center;
+	padding: 1em;
+}
+
+.griccitas {
+	position: absolute;
+	left: 10%;
+	width: 80%;
+	height:80%;
+	padding-top: 0.5em;
+	
+}
+
+.lblpie {
+	color: #C3C3C3;
+	font-size: 1.5em;
+}
+
+.imagen {
+	width: 1em;
+	height: 1em;
+}
+
+.footer_style {
+	color = #a02d2d;
+}
+
+
+.divMapaRuta {
+	position: absolute;
+	background: #575757;
+	top: 15%;
+	left: 9%;
+	width: 80%;
+	height: 80%;
+	text-align: center;
+}
+
+.imgmapa {
+	color: rebeccapurple;
+	background-color: #575757;
+	width: 600px;
+	height: 400px;
+	/*padding-top:2em;*/
+	/*position:absolute;*/
+	left: -20%;
+}
+
+.divImgPull {
+	color: rebeccapurple;
+	background-color: #575757;
+	width: 100%;
+	height: 100%;
+	/*padding-top:2em;*/
+	/*position:absolute;*/
+	left: -20%;
+	background-image: url("../img/imgPullRecepcion.png");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.divCarritoH {
+	width: 100px;
+	height: 60px;
+	background-color: cadetblue;
+	position: absolute;
+	border: solid;
+	border-color: black;
+	background-image:url("../img/imgM2_H.png");
+	background-size: 100% 100%;
+	display:none;
+}
+
+.divCarritoV {
+	width: 70px;
+	height: 100px;
+	background-color: cadetblue;
+	position: absolute;
+	border: solid;
+	border-color: black;
+	background-image: url("../img/imgM2_V.png");
+	background-size: 100% 100%;
+	display: none;
+}
+
+.imgcarro {
+	width:100%;
+	height:100%;
+}
+
+.lblPlacav {
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	border: solid;
+	border-color: black;
+	background-color: black;
+	top: 90px;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+}
+
+.lblPlacah {
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	border: solid;
+	border-color: black;
+	background-color: black;
+}
+
+
+.divorganigrama {
+	position: absolute;
+	background: #575757;	
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.divorg {	
+	background-color: #575757;
+	width: 100%;
+	height: 100%;	
+	position:absolute;
+}

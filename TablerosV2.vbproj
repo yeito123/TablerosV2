@@ -1,0 +1,1224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{4084A7B0-B5EA-4D5E-87A4-7079AD54D834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TablerosV2</RootNamespace>
+    <AssemblyName>TablerosV2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TablerosV2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Optimize>false</Optimize>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TablerosV2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20229.15115, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CRMEnvioCorreos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CRMEnvioCorreos.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\PullSysV2SSQUERETARO\SSQUERETAROverAngel\PullSysV2\bin\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph.Web">
+      <HintPath>..\..\PullSysV2SSQUERETARO\SSQUERETAROverAngel\PullSysV2\bin\ZedGraph.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="AjaxControlToolkit" />
+    <Import Include="AjaxControlToolkit.Config" />
+    <Import Include="AjaxControlToolkit.Design" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Theme1\StyleSheetRecepcionSeguimiento2.css" />
+    <Content Include="Controles\ctlLlegadas.ascx" />
+    <Content Include="Controles\ctlResumen.ascx" />
+    <Content Include="Controles\ctlSalir.ascx" />
+    <Content Include="css\StylosRecepcion.css" />
+    <Content Include="File.aspx" />
+    <Content Include="Ausencias.aspx" />
+    <Content Include="Bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Bootstrap\css\bootstrap.css" />
+    <Content Include="Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Bootstrap\js\bootstrap.js" />
+    <Content Include="Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\js\jquery-2.1.4.min.js" />
+    <Content Include="Bootstrap\js\npm.js" />
+    <Content Include="Config.aspx" />
+    <Content Include="css\Generales.css" />
+    <Content Include="css\HypGeneral.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.contextMenu.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Diagnostico.aspx" />
+    <Content Include="FileAux.aspx" />
+    <Content Include="img\1_h.gif" />
+    <Content Include="img\1_h.png" />
+    <Content Include="img\1_h1.png" />
+    <Content Include="img\1_v.gif" />
+    <Content Include="img\1_v.png" />
+    <Content Include="img\1_v1.png" />
+    <Content Include="img\20_h.gif" />
+    <Content Include="img\20_v.gif" />
+    <Content Include="img\21_h.gif" />
+    <Content Include="img\21_v.gif" />
+    <Content Include="img\22_h.gif" />
+    <Content Include="img\22_v.gif" />
+    <Content Include="img\28_h.gif" />
+    <Content Include="img\28_v.gif" />
+    <Content Include="img\2_h.gif" />
+    <Content Include="img\2_v.gif" />
+    <Content Include="img\37_h.gif" />
+    <Content Include="img\37_v.gif" />
+    <Content Include="img\6_h.gif" />
+    <Content Include="img\6_v.gif" />
+    <Content Include="img\accept.gif" />
+    <Content Include="img\aceptar.png" />
+    <Content Include="img\Add_32x32.png" />
+    <Content Include="img\AgenciaLogoHeader.png" />
+    <Content Include="img\AgenciaLogoHeader1.png" />
+    <Content Include="img\AumentaTiempo.png" />
+    <Content Include="img\b1.gif" />
+    <Content Include="img\b2.gif" />
+    <Content Include="img\b3.gif" />
+    <Content Include="img\b4.gif" />
+    <Content Include="img\bienvenida.png" />
+    <Content Include="img\bienvenida_1.png" />
+    <Content Include="img\bienvenida_2.png" />
+    <Content Include="img\bienvenida_3.png" />
+    <Content Include="img\bienvenida_4.png" />
+    <Content Include="img\bienvenida_5.png" />
+    <Content Include="img\blink.gif" />
+    <Content Include="img\blink.png" />
+    <Content Include="img\blink2.gif" />
+    <Content Include="img\blink3.gif" />
+    <Content Include="img\blinkGreen.gif" />
+    <Content Include="img\blinkyellow.gif" />
+    <Content Include="img\BorrarCita.png" />
+    <Content Include="img\bruta.gif" />
+    <Content Include="img\bruta1.gif" />
+    <Content Include="img\btnSalir.png" />
+    <Content Include="img\Bus.png" />
+    <Content Include="img\calendar.png" />
+    <Content Include="img\cambus.gif" />
+    <Content Include="img\camsprint.gif" />
+    <Content Include="img\camtrack.gif" />
+    <Content Include="img\cancel.png" />
+    <Content Include="img\chipText.png" />
+    <Content Include="img\chipTextPull.png" />
+    <Content Include="img\cita.gif" />
+    <Content Include="img\citasHeader_21.png" />
+    <Content Include="img\contraseña.png" />
+    <Content Include="img\Cortar.png" />
+    <Content Include="img\delete.gif" />
+    <Content Include="img\Delete_32x32.png" />
+    <Content Include="img\down.gif" />
+    <Content Include="img\edit.gif" />
+    <Content Include="img\favm.png" />
+    <Content Include="img\Find_32x32.png" />
+    <Content Include="img\fmarcopolo.png" />
+    <Content Include="img\fondoHeader.png" />
+    <Content Include="img\fovnibus.png" />
+    <Content Include="img\GrabarCita.png" />
+    <Content Include="img\gvm.png" />
+    <Content Include="img\hand.gif" />
+    <Content Include="img\HMEnu2\Back.png" />
+    <Content Include="img\HMEnu2\corner_blue_left.png" />
+    <Content Include="img\HMEnu2\corner_blue_right.png" />
+    <Content Include="img\HMEnu2\corner_inset_left.png" />
+    <Content Include="img\HMEnu2\corner_inset_right.png" />
+    <Content Include="img\HMEnu2\corner_left.png" />
+    <Content Include="img\HMEnu2\corner_right.png" />
+    <Content Include="img\HMEnu2\dot.gif" />
+    <Content Include="img\HMEnu2\dot_blue.png" />
+    <Content Include="img\HMEnu2\magnifier.png" />
+    <Content Include="img\HMEnu2\menu_left.png" />
+    <Content Include="img\HMEnu2\menu_right.png" />
+    <Content Include="img\HMEnu2\Salir.jpg" />
+    <Content Include="img\Hoy.png" />
+    <Content Include="img\imgAceptar.png" />
+    <Content Include="img\imgAceptarBorrar.png" />
+    <Content Include="img\imgbtnAgregar.png" />
+    <Content Include="img\imgBtnBorrar.png" />
+    <Content Include="img\imgBtnSalir.png" />
+    <Content Include="img\imgB_H.png" />
+    <Content Include="img\imgB_V.png" />
+    <Content Include="img\imgCx_H.png" />
+    <Content Include="img\imgCx_V.png" />
+    <Content Include="img\imgDetalle.png" />
+    <Content Include="img\imgEnvio.png" />
+    <Content Include="img\imgHeaderCaliad.png" />
+    <Content Include="img\imgLogoMazda.png" />
+    <Content Include="img\imgM2_H.png" />
+    <Content Include="img\imgM2_V.png" />
+    <Content Include="img\imgorg_1a.PNG" />
+    <Content Include="img\imgorg_2.PNG" />
+    <Content Include="img\ImgPullPrincipal.png" />
+    <Content Include="img\imgPullRecepcion.png" />
+    <Content Include="img\imgPullRecepcions.png" />
+    <Content Include="img\imgSalirdt.png" />
+    <Content Include="img\img_smf_naranja.png" />
+    <Content Include="img\img_smf_rojo.png" />
+    <Content Include="img\img_smf_verde.png" />
+    <Content Include="img\jueves.PNG" />
+    <Content Include="img\left_foraneo_avm.png" />
+    <Content Include="img\left_foraneo_flecha.png" />
+    <Content Include="img\LEFT_foraneo_ovni.png" />
+    <Content Include="img\left_urbano_avm.png" />
+    <Content Include="img\LogoHeader.png" />
+    <Content Include="img\LogoHeaderq.png" />
+    <Content Include="img\logout.png" />
+    <Content Include="img\lunes.PNG" />
+    <Content Include="img\martes - copia.PNG" />
+    <Content Include="img\martes.PNG" />
+    <Content Include="img\MazdaLogo1.jpg" />
+    <Content Include="img\MazdaLogo1.png" />
+    <Content Include="img\MazdaLogo21.jpg" />
+    <Content Include="img\miercoles.PNG" />
+    <Content Include="img\MoverCita.png" />
+    <Content Include="img\new.gif" />
+    <Content Include="img\Pegar.png" />
+    <Content Include="img\Plata15.PNG" />
+    <Content Include="img\plecas.png" />
+    <Content Include="img\pleca_azul.jpg" />
+    <Content Include="img\pleca_azul.png" />
+    <Content Include="img\pleca_roja.jpg" />
+    <Content Include="img\Prepicking.png" />
+    <Content Include="img\Preview_32x32.png" />
+    <Content Include="img\Previous_32x32.png" />
+    <Content Include="img\Promocion.png" />
+    <Content Include="img\ptHeader_21.png" />
+    <Content Include="img\refresh.png" />
+    <Content Include="img\right_32.png" />
+    <Content Include="img\right_foraneo_avm.png" />
+    <Content Include="img\right_foraneo_flecha.png" />
+    <Content Include="img\right_foraneo_ovni.png" />
+    <Content Include="img\right_urbano_avm.png" />
+    <Content Include="img\sabado.PNG" />
+    <Content Include="img\Salir.png" />
+    <Content Include="img\Salir2.png" />
+    <Content Include="img\Sel.png" />
+    <Content Include="img\semaforo_rojo.gif" />
+    <Content Include="img\semaforo_verde.gif" />
+    <Content Include="img\semaforo_yellow.gif" />
+    <Content Include="img\Send_32x32.png" />
+    <Content Include="img\SEPARADOR.gif" />
+    <Content Include="img\tecFin.png" />
+    <Content Include="img\TecHeader_21.png" />
+    <Content Include="img\tecInicio.png" />
+    <Content Include="img\tecParar.png" />
+    <Content Include="img\tecReiniciar.png" />
+    <Content Include="img\telefonista.bmp" />
+    <Content Include="img\toyota_cn_servicio_8B.png" />
+    <Content Include="img\toyota_cn_servicio_8B121.png" />
+    <Content Include="img\Trash.png" />
+    <Content Include="img\up.gif" />
+    <Content Include="img\viernes.PNG" />
+    <Content Include="img\v_bluewe_v_l.gif" />
+    <Content Include="img\v_blue_h_l.gif" />
+    <Content Include="img\v_blue_h_l2.gif" />
+    <Content Include="img\v_blue_h_wel.gif" />
+    <Content Include="img\v_blue_v_l.gif" />
+    <Content Include="img\v_blue_v_l2.gif" />
+    <Content Include="img\v_red_h_l.gif" />
+    <Content Include="img\v_red_v_l.gif" />
+    <Content Include="img\v_white_h_l.gif" />
+    <Content Include="img\v_yellow_h_l.gif" />
+    <Content Include="img\zoomzoom1.JPG" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="JS\anytime.5.1.2.min.css" />
+    <Content Include="JS\anytime.5.1.2.min.js" />
+    <Content Include="JS\arrow.gif" />
+    <Content Include="JS\JavaScriptRecepcionSeguimiento.js" />
+    <Content Include="JS\jquery-1.9.1.js" />
+    <Content Include="JS\jquery-ui.js" />
+    <Content Include="JS\jquery.contextMenuIz.js" />
+    <Content Include="JS\jquery.contextMenu.js" />
+    <Content Include="JS\jquery.simplemodal.js" />
+    <Content Include="JS\tablesorter.js" />
+    <Content Include="JS\umodal.js" />
+    <Content Include="JS\wz_dragdrop.js" />
+    <Content Include="JS\wz_dragdrop4.js" />
+    <Content Include="JS\wz_dragdrop2.js" />
+    <Content Include="JS\wz_dragdrop3.js" />
+    <Content Include="JS\wz_jsgraphics.js" />
+    <Content Include="JS\wz_jsgraphics2.js" />
+    <Content Include="JS\wz_jsgraphics3.js" />
+    <Content Include="Lavado.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="OrdenTecnico.aspx" />
+    <Content Include="pantalla_entregas.aspx" />
+    <Content Include="promociones.aspx" />
+    <Content Include="pullconfigcamiones.aspx" />
+    <Content Include="pull_system2.aspx" />
+    <Content Include="pull_system3b.aspx" />
+    <Content Include="pull_system3c.aspx" />
+    <Content Include="RecepcionCitas3Ct.aspx" />
+    <Content Include="Recepcion_mazda.aspx" />
+    <Content Include="Refacciones.aspx" />
+    <Content Include="pantallaPrecios.aspx" />
+    <Content Include="Prepickin.aspx" />
+    <Content Include="pull_system.aspx" />
+    <Content Include="pull_system5.aspx" />
+    <Content Include="pull_system4.aspx" />
+    <Content Include="pull_system3.aspx" />
+    <Content Include="pull_systemConfig4.aspx" />
+    <Content Include="pull_systemConfig2.aspx" />
+    <Content Include="pull_systemConfig.aspx" />
+    <Content Include="pull_systemDetalle.aspx" />
+    <Content Include="RecepcionCitas3b.aspx" />
+    <Content Include="RecepcionCitas3a.aspx" />
+    <Content Include="RecepcionCitas3.aspx" />
+    <Content Include="RecepcionCitas2.aspx" />
+    <Content Include="RecepcionCitas.aspx" />
+    <Content Include="res\ModalWindowEffects\css\component.css" />
+    <Content Include="res\ModalWindowEffects\css\default.css" />
+    <Content Include="res\ModalWindowEffects\fonts\codropsicons\codropsicons.svg" />
+    <Content Include="res\ModalWindowEffects\fonts\codropsicons\license.txt" />
+    <Content Include="res\ModalWindowEffects\index.html" />
+    <Content Include="res\ModalWindowEffects\js\classie.js" />
+    <Content Include="res\ModalWindowEffects\js\css-filters-polyfill.js" />
+    <Content Include="res\ModalWindowEffects\js\cssParser.js" />
+    <Content Include="res\ModalWindowEffects\js\modalEffects.js" />
+    <Content Include="res\ModalWindowEffects\js\modernizr.custom.js" />
+    <Content Include="res\zrecepcion.aspx" />
+    <Content Include="sccPermisosp.aspx" />
+    <Content Include="sccPermisosCHIPS.aspx" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="secchlp.aspx" />
+    <Content Include="tblAlineacion.aspx" />
+    <Content Include="TblAusencias.aspx" />
+    <Content Include="TblCalidadV2_masco.aspx" />
+    <Content Include="TblCalidadV2.aspx" />
+    <Content Include="TblEstados.aspx" />
+    <Content Include="TblHistorial.aspx" />
+    <Content Include="tblMap_ruta.aspx" />
+    <Content Include="TblNoShow.aspx" />
+    <Content Include="tblOrganigrama.aspx" />
+    <Content Include="tblPullCamiones.aspx" />
+    <Content Include="TblPullRecepcion.aspx" />
+    <Content Include="tblRepuestos.aspx" />
+    <Content Include="TblSura_mazautos.aspx" />
+    <Content Include="tCitasCamiones.aspx" />
+    <Content Include="whuxgaHYPmain2.aspx" />
+    <Content Include="_configRecepciones.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_recepcionCitas.aspx" />
+    <Content Include="_tblCalidad.aspx" />
+    <Content Include="tblCalidad.aspx" />
+    <Content Include="TAsesores.aspx" />
+    <Content Include="TCitas2.aspx" />
+    <Content Include="TProgreso.aspx" />
+    <Content Include="TTecnicos3.aspx" />
+    <Content Include="TTecnicos2.aspx" />
+    <Content Include="TTecnicosLavado.aspx" />
+    <Content Include="TTecnicos.aspx" />
+    <Content Include="TCitas.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TLavado.aspx" />
+    <Content Include="zcrmCuestionarioDetalle.aspx" />
+    <Content Include="zcrmCuestionarioDetalleB.aspx" />
+    <Content Include="zcrmCuestionarioDetalleInventario.aspx" />
+    <Content Include="zcrmCuestionarioEntregaDetalle.aspx" />
+    <Content Include="zcrmCuestionarioEntregaDetalleB.aspx" />
+    <Content Include="zcrmGerencia.aspx" />
+    <Content Include="zcrmSeguimiento.aspx" />
+    <Content Include="zFile.aspx" />
+    <Content Include="zEntregas.aspx" />
+    <Content Include="_zcrmCuestionarioDetalle.aspx" />
+    <Content Include="_zRecepcionAsesoresD.aspx" />
+    <Content Include="_zrecepcionEntregas.aspx" />
+    <Content Include="_zrecepcionLlegadas.aspx" />
+    <Content Include="_nzrecepcion.aspx" />
+    <Content Include="zrecepcion2.aspx" />
+    <Content Include="zrecepcion.aspx" />
+    <Content Include="zRecepcionAsesoresC.aspx" />
+    <Content Include="zRecepcionAsesoresEntrega.aspx" />
+    <Content Include="zRecepcionAsesoresD.aspx" />
+    <Content Include="zRecepcionAsesores.aspx" />
+    <Content Include="zRecepcionAsesoresServiciosOrden.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controles\ctlLlegadas.ascx.designer.vb">
+      <DependentUpon>ctlLlegadas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlLlegadas.ascx.vb">
+      <DependentUpon>ctlLlegadas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlResumen.ascx.designer.vb">
+      <DependentUpon>ctlResumen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlResumen.ascx.vb">
+      <DependentUpon>ctlResumen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlSalir.ascx.designer.vb">
+      <DependentUpon>ctlSalir.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlSalir.ascx.vb">
+      <DependentUpon>ctlSalir.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="File.aspx.designer.vb">
+      <DependentUpon>File.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="File.aspx.vb">
+      <DependentUpon>File.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ausencias.aspx.designer.vb">
+      <DependentUpon>Ausencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ausencias.aspx.vb">
+      <DependentUpon>Ausencias.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Config.aspx.designer.vb">
+      <DependentUpon>Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config.aspx.vb">
+      <DependentUpon>Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico.aspx.designer.vb">
+      <DependentUpon>Diagnostico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico.aspx.vb">
+      <DependentUpon>Diagnostico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileAux.aspx.designer.vb">
+      <DependentUpon>FileAux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileAux.aspx.vb">
+      <DependentUpon>FileAux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lavado.aspx.designer.vb">
+      <DependentUpon>Lavado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lavado.aspx.vb">
+      <DependentUpon>Lavado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OrdenTecnico.aspx.designer.vb">
+      <DependentUpon>OrdenTecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenTecnico.aspx.vb">
+      <DependentUpon>OrdenTecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pantalla_entregas.aspx.designer.vb">
+      <DependentUpon>pantalla_entregas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pantalla_entregas.aspx.vb">
+      <DependentUpon>pantalla_entregas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="promociones.aspx.designer.vb">
+      <DependentUpon>promociones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="promociones.aspx.vb">
+      <DependentUpon>promociones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pullconfigcamiones.aspx.designer.vb">
+      <DependentUpon>pullconfigcamiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pullconfigcamiones.aspx.vb">
+      <DependentUpon>pullconfigcamiones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="pull_system2.aspx.designer.vb">
+      <DependentUpon>pull_system2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_system2.aspx.vb">
+      <DependentUpon>pull_system2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_system3b.aspx.designer.vb">
+      <DependentUpon>pull_system3b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_system3b.aspx.vb">
+      <DependentUpon>pull_system3b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_system3c.aspx.designer.vb">
+      <DependentUpon>pull_system3c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_system3c.aspx.vb">
+      <DependentUpon>pull_system3c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_systemDetalle2.aspx.designer.vb">
+      <DependentUpon>pull_systemDetalle2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_systemDetalle2.aspx.vb">
+      <DependentUpon>pull_systemDetalle2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecepcionCitas3Ct.aspx.designer.vb">
+      <DependentUpon>RecepcionCitas3Ct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecepcionCitas3Ct.aspx.vb">
+      <DependentUpon>RecepcionCitas3Ct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recepcion_mazda.aspx.designer.vb">
+      <DependentUpon>Recepcion_mazda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recepcion_mazda.aspx.vb">
+      <DependentUpon>Recepcion_mazda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Refacciones.aspx.designer.vb">
+      <DependentUpon>Refacciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Refacciones.aspx.vb">
+      <DependentUpon>Refacciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pantallaPrecios.aspx.designer.vb">
+      <DependentUpon>pantallaPrecios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaPrecios.aspx.vb">
+      <DependentUpon>pantallaPrecios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prepickin.aspx.designer.vb">
+      <DependentUpon>Prepickin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prepickin.aspx.vb">
+      <DependentUpon>Prepickin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_system.aspx.designer.vb">
+      <DependentUpon>pull_system.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_system.aspx.vb">
+      <DependentUpon>pull_system.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_system5.aspx.designer.vb">
+      <DependentUpon>pull_system5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_system5.aspx.vb">
+      <DependentUpon>pull_system5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_system4.aspx.designer.vb">
+      <DependentUpon>pull_system4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_system4.aspx.vb">
+      <DependentUpon>pull_system4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_system3.aspx.designer.vb">
+      <DependentUpon>pull_system3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_system3.aspx.vb">
+      <DependentUpon>pull_system3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_systemConfig4.aspx.designer.vb">
+      <DependentUpon>pull_systemConfig4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_systemConfig4.aspx.vb">
+      <DependentUpon>pull_systemConfig4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_systemConfig2.aspx.designer.vb">
+      <DependentUpon>pull_systemConfig2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_systemConfig2.aspx.vb">
+      <DependentUpon>pull_systemConfig2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_systemConfig.aspx.designer.vb">
+      <DependentUpon>pull_systemConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_systemConfig.aspx.vb">
+      <DependentUpon>pull_systemConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pull_systemDetalle.aspx.designer.vb">
+      <DependentUpon>pull_systemDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pull_systemDetalle.aspx.vb">
+      <DependentUpon>pull_systemDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecepcionCitas3b.aspx.designer.vb">
+      <DependentUpon>RecepcionCitas3b.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecepcionCitas3b.aspx.vb">
+      <DependentUpon>RecepcionCitas3b.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecepcionCitas3a.aspx.designer.vb">
+      <DependentUpon>RecepcionCitas3a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecepcionCitas3a.aspx.vb">
+      <DependentUpon>RecepcionCitas3a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecepcionCitas3.aspx.designer.vb">
+      <DependentUpon>RecepcionCitas3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecepcionCitas3.aspx.vb">
+      <DependentUpon>RecepcionCitas3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecepcionCitas2.aspx.designer.vb">
+      <DependentUpon>RecepcionCitas2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecepcionCitas2.aspx.vb">
+      <DependentUpon>RecepcionCitas2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecepcionCitas.aspx.designer.vb">
+      <DependentUpon>RecepcionCitas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecepcionCitas.aspx.vb">
+      <DependentUpon>RecepcionCitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sccPermisosp.aspx.designer.vb">
+      <DependentUpon>sccPermisosp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sccPermisosp.aspx.vb">
+      <DependentUpon>sccPermisosp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sccPermisosCHIPS.aspx.designer.vb">
+      <DependentUpon>sccPermisosCHIPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sccPermisosCHIPS.aspx.vb">
+      <DependentUpon>sccPermisosCHIPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secchlp.aspx.designer.vb">
+      <DependentUpon>secchlp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secchlp.aspx.vb">
+      <DependentUpon>secchlp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="tblAlineacion.aspx.designer.vb">
+      <DependentUpon>tblAlineacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tblAlineacion.aspx.vb">
+      <DependentUpon>tblAlineacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TblAusencias.aspx.designer.vb">
+      <DependentUpon>TblAusencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TblAusencias.aspx.vb">
+      <DependentUpon>TblAusencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TblCalidadV2_masco.aspx.designer.vb">
+      <DependentUpon>TblCalidadV2_masco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TblCalidadV2_masco.aspx.vb">
+      <DependentUpon>TblCalidadV2_masco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TblCalidadV2.aspx.designer.vb">
+      <DependentUpon>TblCalidadV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TblCalidadV2.aspx.vb">
+      <DependentUpon>TblCalidadV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TblHistorial.aspx.designer.vb">
+      <DependentUpon>TblHistorial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TblEstados.aspx.designer.vb">
+      <DependentUpon>TblEstados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TblEstados.aspx.vb">
+      <DependentUpon>TblEstados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TblHistorial.aspx.vb">
+      <DependentUpon>TblHistorial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tblMap_ruta.aspx.designer.vb">
+      <DependentUpon>tblMap_ruta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tblMap_ruta.aspx.vb">
+      <DependentUpon>tblMap_ruta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TblNoShow.aspx.designer.vb">
+      <DependentUpon>TblNoShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TblNoShow.aspx.vb">
+      <DependentUpon>TblNoShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tblOrganigrama.aspx.designer.vb">
+      <DependentUpon>tblOrganigrama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tblOrganigrama.aspx.vb">
+      <DependentUpon>tblOrganigrama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tblPullCamiones.aspx.designer.vb">
+      <DependentUpon>tblPullCamiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tblPullCamiones.aspx.vb">
+      <DependentUpon>tblPullCamiones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TblPullRecepcion.aspx.designer.vb">
+      <DependentUpon>TblPullRecepcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TblPullRecepcion.aspx.vb">
+      <DependentUpon>TblPullRecepcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tblRepuestos.aspx.designer.vb">
+      <DependentUpon>tblRepuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tblRepuestos.aspx.vb">
+      <DependentUpon>tblRepuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TblSura_mazautos.aspx.designer.vb">
+      <DependentUpon>TblSura_mazautos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TblSura_mazautos.aspx.vb">
+      <DependentUpon>TblSura_mazautos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tCitasCamiones.aspx.designer.vb">
+      <DependentUpon>tCitasCamiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tCitasCamiones.aspx.vb">
+      <DependentUpon>tCitasCamiones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="whuxgaHYPmain2.aspx.designer.vb">
+      <DependentUpon>whuxgaHYPmain2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="whuxgaHYPmain2.aspx.vb">
+      <DependentUpon>whuxgaHYPmain2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_configRecepciones.aspx.designer.vb">
+      <DependentUpon>_configRecepciones.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="_configRecepciones.aspx.vb">
+      <DependentUpon>_configRecepciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="_recepcionCitas.aspx.designer.vb">
+      <DependentUpon>_recepcionCitas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_recepcionCitas.aspx.vb">
+      <DependentUpon>_recepcionCitas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="_tblCalidad.aspx.designer.vb">
+      <DependentUpon>_tblCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_tblCalidad.aspx.vb">
+      <DependentUpon>_tblCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tblCalidad.aspx.designer.vb">
+      <DependentUpon>tblCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tblCalidad.aspx.vb">
+      <DependentUpon>tblCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TAsesores.aspx.designer.vb">
+      <DependentUpon>TAsesores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TAsesores.aspx.vb">
+      <DependentUpon>TAsesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TCitas2.aspx.designer.vb">
+      <DependentUpon>TCitas2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TCitas2.aspx.vb">
+      <DependentUpon>TCitas2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TProgreso.aspx.designer.vb">
+      <DependentUpon>TProgreso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TProgreso.aspx.vb">
+      <DependentUpon>TProgreso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTecnicos3.aspx.designer.vb">
+      <DependentUpon>TTecnicos3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTecnicos3.aspx.vb">
+      <DependentUpon>TTecnicos3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTecnicos2.aspx.designer.vb">
+      <DependentUpon>TTecnicos2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTecnicos2.aspx.vb">
+      <DependentUpon>TTecnicos2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTecnicosLavado.aspx.designer.vb">
+      <DependentUpon>TTecnicosLavado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTecnicosLavado.aspx.vb">
+      <DependentUpon>TTecnicosLavado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTecnicos.aspx.designer.vb">
+      <DependentUpon>TTecnicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTecnicos.aspx.vb">
+      <DependentUpon>TTecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TCitas.aspx.designer.vb">
+      <DependentUpon>TCitas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TCitas.aspx.vb">
+      <DependentUpon>TCitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TLavado.aspx.designer.vb">
+      <DependentUpon>TLavado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TLavado.aspx.vb">
+      <DependentUpon>TLavado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zcrmCuestionarioDetalle.aspx.designer.vb">
+      <DependentUpon>zcrmCuestionarioDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zcrmCuestionarioDetalle.aspx.vb">
+      <DependentUpon>zcrmCuestionarioDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zcrmCuestionarioDetalleB.aspx.designer.vb">
+      <DependentUpon>zcrmCuestionarioDetalleB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zcrmCuestionarioDetalleB.aspx.vb">
+      <DependentUpon>zcrmCuestionarioDetalleB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zcrmCuestionarioDetalleInventario.aspx.designer.vb">
+      <DependentUpon>zcrmCuestionarioDetalleInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zcrmCuestionarioDetalleInventario.aspx.vb">
+      <DependentUpon>zcrmCuestionarioDetalleInventario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="zcrmCuestionarioEntregaDetalle.aspx.designer.vb">
+      <DependentUpon>zcrmCuestionarioEntregaDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zcrmCuestionarioEntregaDetalle.aspx.vb">
+      <DependentUpon>zcrmCuestionarioEntregaDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zcrmCuestionarioEntregaDetalleB.aspx.designer.vb">
+      <DependentUpon>zcrmCuestionarioEntregaDetalleB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zcrmCuestionarioEntregaDetalleB.aspx.vb">
+      <DependentUpon>zcrmCuestionarioEntregaDetalleB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zcrmGerencia.aspx.designer.vb">
+      <DependentUpon>zcrmGerencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zcrmGerencia.aspx.vb">
+      <DependentUpon>zcrmGerencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zcrmSeguimiento.aspx.designer.vb">
+      <DependentUpon>zcrmSeguimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zcrmSeguimiento.aspx.vb">
+      <DependentUpon>zcrmSeguimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zFile.aspx.designer.vb">
+      <DependentUpon>zFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zFile.aspx.vb">
+      <DependentUpon>zFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zEntregas.aspx.designer.vb">
+      <DependentUpon>zEntregas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zEntregas.aspx.vb">
+      <DependentUpon>zEntregas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_zcrmCuestionarioDetalle.aspx.designer.vb">
+      <DependentUpon>_zcrmCuestionarioDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_zcrmCuestionarioDetalle.aspx.vb">
+      <DependentUpon>_zcrmCuestionarioDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_zRecepcionAsesoresD.aspx.designer.vb">
+      <DependentUpon>_zRecepcionAsesoresD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_zRecepcionAsesoresD.aspx.vb">
+      <DependentUpon>_zRecepcionAsesoresD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_zrecepcionEntregas.aspx.designer.vb">
+      <DependentUpon>_zrecepcionEntregas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_zrecepcionEntregas.aspx.vb">
+      <DependentUpon>_zrecepcionEntregas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_zrecepcionLlegadas.aspx.designer.vb">
+      <DependentUpon>_zrecepcionLlegadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_zrecepcionLlegadas.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>_zrecepcionLlegadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_nzrecepcion.aspx.designer.vb">
+      <DependentUpon>_nzrecepcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_nzrecepcion.aspx.vb">
+      <DependentUpon>_nzrecepcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zrecepcion2.aspx.designer.vb">
+      <DependentUpon>zrecepcion2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zrecepcion2.aspx.vb">
+      <DependentUpon>zrecepcion2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zrecepcion.aspx.designer.vb">
+      <DependentUpon>zrecepcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zrecepcion.aspx.vb">
+      <DependentUpon>zrecepcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zRecepcionAsesoresC.aspx.designer.vb">
+      <DependentUpon>zRecepcionAsesoresC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zRecepcionAsesoresC.aspx.vb">
+      <DependentUpon>zRecepcionAsesoresC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zRecepcionAsesoresEntrega.aspx.designer.vb">
+      <DependentUpon>zRecepcionAsesoresEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zRecepcionAsesoresEntrega.aspx.vb">
+      <DependentUpon>zRecepcionAsesoresEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zRecepcionAsesoresD.aspx.designer.vb">
+      <DependentUpon>zRecepcionAsesoresD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zRecepcionAsesoresD.aspx.vb">
+      <DependentUpon>zRecepcionAsesoresD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zRecepcionAsesores.aspx.designer.vb">
+      <DependentUpon>zRecepcionAsesores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zRecepcionAsesores.aspx.vb">
+      <DependentUpon>zRecepcionAsesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zRecepcionAsesoresServiciosOrden.aspx.designer.vb">
+      <DependentUpon>zRecepcionAsesoresServiciosOrden.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zRecepcionAsesoresServiciosOrden.aspx.vb">
+      <DependentUpon>zRecepcionAsesoresServiciosOrden.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Bootstrap\css\bootstrap.css.map" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="res\ModalWindowEffects\.DS_Store" />
+    <Content Include="res\ModalWindowEffects\css\.DS_Store" />
+    <Content Include="res\ModalWindowEffects\fonts\.DS_Store" />
+    <Content Include="res\ModalWindowEffects\fonts\codropsicons\.DS_Store" />
+    <Content Include="res\ModalWindowEffects\fonts\codropsicons\codropsicons.eot" />
+    <Content Include="res\ModalWindowEffects\fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="res\ModalWindowEffects\fonts\codropsicons\codropsicons.woff" />
+    <Content Include="res\ModalWindowEffects\js\.DS_Store" />
+    <Content Include="res\ModalWindowEffects\README.md" />
+    <None Include="Web - Copy.codsnfig">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web - Copy.Debug.codsnfig">
+      <DependentUpon>Web - Copy.codsnfig</DependentUpon>
+    </None>
+    <None Include="Web - Copy.Release.codsnfig">
+      <DependentUpon>Web - Copy.codsnfig</DependentUpon>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="mobil\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TablerosV2LibTypes\TablerosV2LibTypes.vbproj">
+      <Project>{5b8d4758-09b6-4fab-9b14-4e0aaee363d5}</Project>
+      <Name>TablerosV2LibTypes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TablerosV2.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TablerosV2.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1314</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9955/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:1314/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
